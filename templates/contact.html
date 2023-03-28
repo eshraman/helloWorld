@@ -8,11 +8,15 @@
 </head>
 
 <body>
+    {% extends "base.html" %}
+    {% block page_title %}Your Results!{% endblock %}
+    {% block page_content %}
+
 <div class = "container">
-    <h1><strong><center>Contact Me</center></strong></h1>
+    <h1><strong>Contact Me</strong></h1>
 {% if form_submitted %}
     <div class = "col-12">
-        <h2 style="color: dimgray"><center>Thank you for completing my form! Your answers are valued :)</center></h2>
+        <h2 style="color: dimgray">Thank you for completing my form! Your answers are valued :)</h2>
     </div>
     <div class = "col-md-6">
         <p style="color: blue"><strong>First Name:</strong></p>
@@ -59,6 +63,7 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 {% endif %}
+{% endblock %}
 </div>
 </body>
 </html>
